@@ -1,0 +1,33 @@
+@import "tailwindcss"; 
+
+@theme {
+    --font-Montserrat:var(--font-Montserrat);
+    --font-Roboto:var(--font-Roboto);
+    --color-background:rgba(var(--background));
+    --color-primary:rgba(var(--primary));
+    --color-secondary:rgba(var(--secondary))
+}
+
+:root {
+    --font-Montserrat:["Montserrat","sans-serif"];
+    --font-Roboto:["Roboto","sans-serif"];
+    --background:11,21,40,1;
+    --primary:66,250,207,1;
+    --secondary:66,192,250,1;
+}
+
+@utility border_gradient {
+    background:
+            linear-gradient(var(--color-background), var(--color-background)) padding-box,
+            linear-gradient(to right, var(--color-primary), var(--color-secondary)) border-box;
+    border: var(--gradient-border-width,4px) solid transparent;
+    
+}
+@utility text_gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent
+}
+@layer components {
+
+}
+
+
