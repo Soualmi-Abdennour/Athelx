@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import ButtonPrimary from '../components/buttonPrimary';
 import thirtyBadgeImage from '/images/Thirty-badge.png'
 
-const pageEllipses = [
+const PAGE_ELLIPSES = [
   {
     width: 484.01,
     height: 479.57,
@@ -73,17 +73,29 @@ const pageEllipses = [
 function HomePage() {
     return (
       <div className="relative z-0 overflow-x-clip">
-        <Header></Header>
+        <Header isConnected={false}></Header>
         <section className="max-w-[1300px] mx-auto ">
           <div className="absolute right-0 -z-10 ">
             <img src={homeHeroImage} alt="hero section image" />
           </div>
-          <h2 className="inline-block mt-44 text-white font-Montserrat font-bold text-[78px] tracking-wider leading-28 max-w-[950px]">
+          <h2
+            className="inline-block mt-44 heading-1  max-w-[950px]"
+            style={{
+              "--font-size": "78.5px",
+              "--line-height": "107.9px",
+            }}
+          >
             ATTEINS TES{" "}
             <span className="text_gradient">OBJECTIFS SPORTIFS</span> AVEC ATHEL
             <span className="text_gradient">X</span>
           </h2>
-          <p className="font-Roboto text-3xl tracking-wide leading-10 text-white max-w-[675px] pl-5 mt-15">
+          <p
+            className="paragraph-1 max-w-[690px] pl-5 mt-15"
+            style={{
+              "--font-size": "32.38px",
+              "--line-height": "39.2px",
+            }}
+          >
             Compléments, coachs et salles de sport réunis en un seul endroit.
             <br></br>
             Booste tes performances dès aujourd’hui !
@@ -93,10 +105,24 @@ function HomePage() {
           </div>
         </section>
         <section>
-          <h2 className=" text-center mt-44 text-white font-Montserrat font-bold text-[78px] relative tracking-wider leading-28 after:content-[] after:h-1.5 after:w-70 after:bg-gradient-to-r after:from-primary after:to-secondary after:absolute after:bottom-0 after:right-57  ">
+          <h2
+            className=" text-center mt-44 heading-1  relative after:content-[] after:h-1.5 after:w-70 after:bg-gradient-to-r after:from-primary after:to-secondary after:absolute after:bottom-0 after:right-57"
+            style={{
+              "--font-size": "78.5px",
+              "--line-height": "auto",
+              "--letter-spacing": "0.01em",
+            }}
+          >
             Pourquoi choisir Athel<span className="text_gradient">X</span> ?
           </h2>
-          <p className="font-Roboto text-3xl tracking-wide leading-10 text-white max-w-[1000px] text-center mx-auto mt-10">
+          <p
+            className="paragraph-1  max-w-[1000px] text-center mx-auto mt-10"
+            style={{
+              "--font-size": "32.38px",
+              "--line-height": "39.2px",
+              "--letter-spacing":"0.02em"
+            }}
+          >
             AthelX, c’est bien plus qu’une simple plateforme. C’est l’allié de
             tous les athlètes qui veulent progresser, se surpasser et atteindre
             leurs objectifs plus rapidement.
@@ -112,11 +138,20 @@ function HomePage() {
           <ServiceCards></ServiceCards>
         </section>
         <section>
-          <h2 className="mt-30 font-Roboto text-6xl font-bold leading-16 text-white text-center mx-auto tracking-wide max-w-[950px] relative after:content-[] after:h-1.5 after:w-131 after:bg-gradient-to-r after:from-primary after:to-secondary after:absolute after:-bottom-10 after:left-1/2 after:-translate-1/2">
+          <h2
+            className="mt-30 heading-1 leading-16  text-center mx-auto tracking-wide max-w-[950px] relative after:content-[] after:h-1.5 after:w-131 after:bg-gradient-to-r after:from-primary after:to-secondary after:absolute after:-bottom-10 after:left-1/2 after:-translate-1/2"
+            style={{
+              "--font-size": "58.87px",
+              "--line-height": "62.8px",
+              "--letter-spacing": "0.02em",
+            }}
+          >
             PRÊT À <span className="text_gradient">TRANSFORMER</span> TON
             ENTRAÎNEMENT AVEC <span className="text_gradient">ATHELX</span>?
           </h2>
-          <p className="font-Roboto text-3xl tracking-wide leading-10 text-white max-w-[1000px] text-center mx-auto mt-20">
+          <p className="paragraph-1 max-w-[1000px] text-center mx-auto mt-20" style={{
+            "--letter-spacing":"0.02em"
+          }}>
             Athel<span className="text_gradient">X</span> t’accompagne dans
             chaque étape de ton évolution sportive. Ne laisse pas passer cette
             opportunité de progresser avec une équipe et une communauté dédiées
@@ -133,12 +168,12 @@ function HomePage() {
             <h2 className="font-Roboto font-bold text-[56px] leading-12 tracking-wide text-[#4257FA]">
               OFFRE SPÉCIALE !
             </h2>
-            <p className="mt-12 font-Roboto text-white font-bold text-[34px] leading-11 tracking-wide max-w-[1045px] mx-auto">
+            <p className="mt-12 paragraph-1 font-bold max-w-[1045px] mx-auto">
               Inscris-toi aujourd’hui et bénéficie d’un bon de réduction de{" "}
               <span className="text-primary">-30%</span> sur ta première
               commande de compléments !
             </p>
-            <p className="mt-7 font-Roboto text-white  text-[34px] leading-11 tracking-wide max-w-[700px] mx-auto">
+            <p className="mt-7 paragraph-1 max-w-[700px] mx-auto">
               Rejoins-nous dès maintenant et passe au niveau supérieur !
             </p>
             <ButtonPrimary
@@ -157,8 +192,14 @@ function HomePage() {
           </div>
         </section>
         <Footer></Footer>
-        {pageEllipses.map((ellipse,index)=>(
-          <Ellipse key={index} width={ellipse.width} height={ellipse.height} left={ellipse.left} top={ellipse.top}></Ellipse>
+        {PAGE_ELLIPSES.map((ellipse, index) => (
+          <Ellipse
+            key={index}
+            width={ellipse.width}
+            height={ellipse.height}
+            left={ellipse.left}
+            top={ellipse.top}
+          ></Ellipse>
         ))}
       </div>
     );

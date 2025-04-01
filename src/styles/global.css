@@ -5,12 +5,14 @@
     --font-Roboto:var(--font-Roboto);
     --color-background:rgba(var(--background));
     --color-primary:rgba(var(--primary));
-    --color-secondary:rgba(var(--secondary))
+    --color-secondary:rgba(var(--secondary));
+    --font-Poppins:var(--font-Poppins)
 }
 
 :root {
     --font-Montserrat:["Montserrat","sans-serif"];
     --font-Roboto:["Roboto","sans-serif"];
+    --font-Poppins:["Poppins","sans-serif"];
     --background:11,21,40,1;
     --primary:66,250,207,1;
     --secondary:66,192,250,1;
@@ -27,7 +29,28 @@
     @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent
 }
 @layer components {
-
+    .heading-1 {
+        @apply font-Montserrat font-bold text-white ;
+        font-size: var(--font-size,70px);
+        line-height: var(--line-height,80px);
+        letter-spacing:var(--letter-spacing,0.05em);
+    }
+    .heading-2 {
+        @apply font-Montserrat font-bold text_gradient ;
+        font-size: var(--font-size,60px);
+        line-height: var(--line-height,110px);
+        letter-spacing:var(--letter-spacing,0.05em);
+    }
+    .paragraph-1 {
+        @apply font-Roboto text-white ;
+        font-size: var(--font-size,34.34px);
+        line-height: var(--line-height,46.1px);
+        letter-spacing: var(--letter-spacing,0.05em);
+    }
+    .paragraph-2 {
+        @apply font-Montserrat font-bold text-3xl leading-10 tracking-wider text-center text-white;
+    }
 }
 
+/* Rectangle 6 */
 
