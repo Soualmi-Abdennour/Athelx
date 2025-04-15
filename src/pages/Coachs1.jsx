@@ -58,9 +58,9 @@ const COACHS = [
 ];
 function Coachs1Page() {
     return (
-      <div className="relative z-0 overflow-x-clip">
+      <div className=" z-0 overflow-x-clip">
         <div
-          className="relative pb-43"
+          className=" pb-43"
           style={{
             backgroundImage: `url(${heroBgImage})`,
             backgroundSize: "cover",
@@ -70,8 +70,7 @@ function Coachs1Page() {
           <Header isConnected={true}></Header>
           <section className="mt-20">
             <h2 className="heading-1 text-center  max-w-[1200px] mx-auto">
-              TROUVEZ{" "}
-              <span className="text_gradient">LE COACH PARFAIT</span>{" "}
+              TROUVEZ <span className="text_gradient">LE COACH PARFAIT</span>{" "}
               POUR ATTEINDRE VOS OBJECTIFS
             </h2>
             <p className="paragraph-2 max-w-[1000px] mx-auto mt-30">
@@ -81,28 +80,27 @@ function Coachs1Page() {
             <ButtonPrimary buttonClassName="mx-auto mt-20">
               Trouver mon coach
             </ButtonPrimary>
-            <div
-              className="w-full h-74 bg-background absolute -bottom-10 translate-y-1/2"
-              style={{
-                filter: "blur(60px)",
-              }}
-            ></div>
           </section>
         </div>
 
-        <section className="max-w-[1264px] mx-auto">
-          <div className="grid grid-cols-3 rounded-[40px] bg-primary/20 p-10 gap-10">
-              {COACHS.map((coach,index)=>(
-                    <CoachCard
-                        key={index}
-                        coachName={coach.coachName}
-                        coachImage={coach.coachImage}
-                        coachDescription={coach.coachDescription}
-                        coachAddress={coach.coachAddress}
-                        hourPrice={coach.hourPrice}
-                    ></CoachCard>
-              ))}
-
+        <section className="relative z-0">
+          <div
+            className="w-full h-74 bg-background absolute top-10 -translate-y-1/2 -z-10"
+            style={{
+              filter: "blur(60px)",
+            }}
+          ></div>
+          <div className="grid grid-cols-3 rounded-[40px] bg-primary/20 p-10 gap-10 max-w-[1264px] mx-auto">
+            {COACHS.map((coach, index) => (
+              <CoachCard
+                key={index}
+                coachName={coach.coachName}
+                coachImage={coach.coachImage}
+                coachDescription={coach.coachDescription}
+                coachAddress={coach.coachAddress}
+                hourPrice={coach.hourPrice}
+              ></CoachCard>
+            ))}
           </div>
           <div className="bg-primary py-2 px-4 mt-15 mx-auto w-fit rounded-full">
             <a

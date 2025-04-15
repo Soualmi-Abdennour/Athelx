@@ -1,6 +1,6 @@
-import React from 'react'
-import greenLocationIcon from "/icons/location-green.svg"
-import { MapPin, Star } from "lucide-react";
+import { Star } from "lucide-react";
+import React from 'react';
+import greenLocationIcon from "/icons/location-green.svg";
 
 function CoachCard({coachImage,coachName,hourPrice,coachDescription,coachAddress}) {
     return (
@@ -16,8 +16,8 @@ function CoachCard({coachImage,coachName,hourPrice,coachDescription,coachAddress
           <div className="absolute top-3 left-4  z-0 flex flex-col items-center gap-2 ">
             <Star fill="#42FACF" stroke="#42FACF" size={24}></Star>
             <Star fill="#42FACF" stroke="#42FACF" size={24}></Star>
-            <Star fill="#42FACF" stroke="#42FACF" size={14}></Star>
-            <Star fill="#42FACF" stroke="#42FACF" size={14}></Star>
+            <Star fill="#42FACF" stroke="#42FACF" size={24}></Star>
+            <Star fill="#42FACF" stroke="#42FACF" size={24}></Star>
             <Star stroke="#42FACF" size={24}></Star>
           </div>
           <div className="w-[210px] h-[278px] ml-15 mt-9 rounded-[20px] overflow-clip">

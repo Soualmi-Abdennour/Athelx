@@ -58,13 +58,13 @@ const PRODUCTS = [
 
 function Produits1Page() {
   return (
-    <div className="relative z-0 overflow-x-clip">
+    <div className="overflow-x-clip">
       <div
-        className="relative pb-43"
+        className=" pb-43"
         style={{
           backgroundImage: `url(${heroBgImage})`,
           backgroundSize: "cover",
-          backgroundPosition:"top center"
+          backgroundPosition: "top center",
         }}
       >
         <Header isConnected={true}></Header>
@@ -81,17 +81,17 @@ function Produits1Page() {
           <ButtonPrimary buttonClassName="mx-auto mt-20">
             Découvrez nos produits
           </ButtonPrimary>
+        </section>
+      </div>
+
+      <section className="relative z-0">
           <div
-            className="w-full h-74 bg-background absolute  -bottom-0 translate-y-1/2"
+            className="w-full h-74 bg-background absolute  top-10 -translate-y-1/2 -z-10"
             style={{
               filter: "blur(60px)",
             }}
           ></div>
-        </section>
-      </div>
-
-      <section className="max-w-[1264px] mx-auto">
-        <div className="grid grid-cols-3 rounded-[40px] bg-primary/20 p-10 gap-10">
+        <div className="grid grid-cols-3 rounded-[40px] bg-primary/20 p-10 gap-10 max-w-[1264px] mx-auto">
           {PRODUCTS.map((product, index) => (
             <ProduitCard
               key={index}
